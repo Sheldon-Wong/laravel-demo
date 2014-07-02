@@ -1,0 +1,193 @@
+@import "compass/css3"
+@import "compass/css3/filter"
+@import "variables"
+@import "helpers"
+
+.action-bar-input
+	width: 		100%
+	display: 	flex
+	flex-flow: 	row wrap
+	margin: 	em($unit-outter-margin) 0
+
+	input
+		flex-grow: 		10
+		padding: 		em(12px)
+		border-top-left-radius: 4px
+		border-bottom-left-radius: 4px
+		border: 		none
+		background: 	$color-normal
+		color: 			white
+		line-height: 	25px
+
+	button
+		flex-grow: 		1
+		border-top-left-radius: 	0
+		border-bottom-left-radius:  0
+		font-size: 		em(20px)
+
+
+.cards-picture
+	
+	.card
+
+		.card-content
+
+			.content-picture
+				max-height: 	238px
+				width: 			30%
+				display: 		inline-block
+
+			.content-main
+				padding: 		0 0 0 em($unit-outter-margin)
+				width: 			68%
+				display: 		inline-block
+				vertical-align: top
+
+				h3
+					font-size: 		em(22px)
+					font-weight: 	bold
+					margin-bottom: 	em(8px)
+
+					a
+						color: 		$color-normal
+
+				aside
+					margin-top: 	em($unit-outter-margin)
+
+					b
+						font-weight: 	bold
+						color: 			$color-normal
+
+					a
+						padding-bottom: em(1px)
+						border-bottom: 	1px dashed #3bafda
+
+.cards-label
+
+	.card
+
+		.card-content
+			text-align: 		center
+
+			h3
+				font-size: 		em(50px)
+				font-weight: 	bold
+				line-height: 	em(50px)
+
+.card-list-striped
+
+	li
+		&:first-child
+			margin-top: 	em(15px)
+
+		&:nth-child(even)
+			.card
+				background: rgba(248, 248, 248, 0.82)
+
+		.card
+			width: 		100%
+			margin: 	0
+
+.cards-normal
+
+	.card
+
+		.card-content
+			display: 		flex
+			flex-flow: 		row wrap
+			line-height: 	em(25px)
+
+			.content-main
+				flex-grow: 	3
+
+				img
+					width: 				em(55px)
+					height: 			auto
+					float: 				left
+					margin-right: 		em($unit-outter-margin)
+
+				p
+					margin-top: 		em(2px)
+					font-size: 			em(25px)
+					font-weight: 		bold
+
+					&:last-child
+						margin-top: 	em(4px)
+						font-size: 		em(14px)
+						font-weight: 	normal
+						color: 			$color-normal
+
+			.content-addon
+				flex-grow: 		1
+				text-align: 	right			
+
+				a
+					display: 		none
+					padding: 		em(15px)
+					color: 			$color-normal
+		
+		&:hover
+			.card-content
+				.content-addon
+					a
+						display: 		inline-block
+
+.cards-order
+
+	.card
+
+		.card-content
+			display: 		flex
+			flex-flow: 		row wrap
+			line-height: 	1
+
+			.order-info
+				flex-grow: 			2
+
+				img
+					width: 			em(55px)
+					float: 			left
+					margin-right: 	em($unit-outter-margin)
+
+				p
+					display: 		block
+					margin-top: 	em(7px)
+
+					b
+						font-weight: 	bold
+						color: 			$color-normal
+			
+			.order-content
+				flex-grow: 			4
+
+				ul
+					margin: 		0
+
+					li
+						display: 		inline-block
+						margin: 		0 em(10px) 0 0
+
+						&:last-child
+							margin: 	0
+
+						img
+							width: 			auto
+							height: 		em(55px)
+							+border-radius(0)
+
+			.order-price
+				flex-grow: 	1
+				height: 	em(49px, 34px)
+				line-height: em(49px, 34px)
+				text-align: right
+				font-weight: 	bold
+				font-size: 		em(34px)
+
+.froala-box
+	.froala-element
+		&.f-basic
+			min-height: 	em(200px)!important
+		&.f-placeholder
+			min-height: 	em(200px)!important
+
+						

@@ -1,0 +1,56 @@
+@import "compass/css3"
+@import "helpers"
+@import "variables"
+
+nav
+    .user-info
+        display:    block   !important
+        width:      45%
+        margin:     0 auto  !important
+
+$nav-icon-size:     em(32px)
+$nav-height:        em(50px)
+$nav-icon-padding:  ($nav-height - $nav-icon-size) / 2
+.navigator
+    width:          100%
+    height:         $nav-height
+    background:     rgba(247,247,247,.95)
+    +box-shadow(rgba(0,0,0,.2) 0 0 6px)
+    position:       fixed
+    top:            0
+    text-align:     center
+    z-index:        450
+    h1
+        line-height: em(26px)
+        font:
+            size:   em(30px)
+        a
+            color: $brand-red-color
+
+    .nav-icon
+        position:   absolute
+        top:        $nav-icon-padding
+        font-size:  em(23px)
+
+        a
+            color:      $brand-red-color
+
+        &:nth-child(2)
+            left:   $nav-icon-padding
+        &:nth-child(3)
+            right:  $nav-icon-padding
+
+    #login
+        top:        8px
+
+        a
+            color:      white
+            float:      left
+
+            &.weaken
+                color:  $brand-red-color
+                background: none
+                border: none
+
+
+

@@ -1,0 +1,233 @@
+@import "compass/css3"
+@import "variables"
+@import "helpers"
+
+$card-height:     130px
+$card-padding:    $unit-outter-margin
+$full-width-card-height:    230px
+.card
+    background:     white
+    position:       relative
+    margin:         em(15px) 0
+    width:          100%
+
+    &.main-card
+        margin-top:         0
+
+    .card-heading
+        height:     $card-height
+        position:   relative
+        padding:    $card-padding
+
+        h2
+            font-size:      em(25px)
+            font-weight:    bold
+            color:          white
+
+        .creator
+            width:      em(70px)
+            position:   absolute
+
+            img
+                border:         5px solid white
+
+            span
+                font-size:      em(15px)
+                font-weight:    bold
+
+            &.bottom-right
+                bottom:         calc(-87px/1.85)
+                right:          em($unit-outter-margin)
+
+            &.bottom-center
+                bottom:         calc(-87px/1.85)
+                left:           calc(50% - 70px/2)
+
+            &.bottom-left
+                bottom:         calc(-87px/1.85)
+                left:           em($unit-outter-margin)
+
+            &.big-avatar
+                width:          em(90px)
+
+                &.bottom-right
+                    bottom:         calc(-107px/1.85)
+                    right:          em($unit-outter-margin)
+
+                &.bottom-center
+                    bottom:         calc(-107px/1.85)
+                    left:           calc(50% - 90px/2)
+
+                &.bottom-left
+                    bottom:         calc(-107px/1.85)
+                    left:           em($unit-outter-margin)
+
+    .card-content
+        padding:        $card-padding
+        width:          100%
+        font-size:      em(14px)
+        line-height:    em(28px)
+
+        .card-content-addon
+            display:        block
+            height:         em(50px)
+            font-size:      em(12px)
+            color:          #aaa
+            line-height:    em(50px)
+
+            &.big-addon
+                margin-top:     em(45px)
+
+    &.has-actions
+
+        .card-action
+            display:        flex
+            flex-flow:      row wrap
+            background:     rgba(245, 245, 245, 0.94)
+            border-top:     $line-seperator
+            width:          100%
+
+            li
+                flex-grow:      1
+                text-align:     center
+                border-right:   1px solid #D4D0D0
+
+                &:last-child
+                    border-right: none
+
+                a
+                    display:        block
+                    padding:        em(15px) 0
+                    color:          $color-normal
+                    font-size:      em(14px)
+
+
+.card-list
+    
+    .card-heading
+
+        h2
+            text-align:     left
+
+    li
+        float:          left
+        margin-left:    0
+
+
+.card-detailed-content
+
+    .card-heading
+
+        h2
+            font-size:      em(30px)
+            margin-bottom:  em($unit-outter-margin*0.6)
+
+        p
+            line-height:    em(25px)
+            font-size:      em(13px)
+
+    .card-small-heading
+        display:            none
+        width:              100%
+        position:           fixed
+        padding:            em(15px) em($unit-outter-margin)
+        top:                0
+        z-index:            8888
+
+        h2
+            color:          white
+            font-size:      em(15px)
+            font-weight:    bold
+            display:        inline-block
+
+        .card-heading-addon
+            display:        inline-block
+            float:          right
+            color:          rgba(247, 242, 242, 0.42)
+            font-size:      em(14px)
+            line-height:    em(15px)
+            padding-top:    em(2px)
+
+    .card-content
+
+        h3
+            clear:          both
+            font-size:      em(25px)
+            font-weight:    bold
+            line-height:    em(30px)
+            margin-top:     em($unit-outter-margin*0.6)
+            margin-bottom:  em($unit-outter-margin*0.4)
+
+            &:first-child
+                margin-top:     0
+
+        p
+            color:          #222
+
+        li
+            color:          #222 !important
+
+        a
+            padding:            0 3px 2px 3px
+            border-bottom:      1px solid #3bafda
+            font-weight:        bold
+
+
+.full-width-card
+    width:          100%!important
+    margin-left:    0!important
+    margin-right:   0!important
+
+    .card-heading
+        height:         em($full-width-card-height) !important
+
+
+.blank-form-card
+
+    cursor:      default!important
+
+    .card-content
+
+        .input-label
+            display:        block
+            margin:         em(25px) 0 em(8px) 0
+            font-weight:    bold
+
+            &:first-child
+                margin-top: 0
+
+        .input
+            display:        block
+            width:          100%
+            line-height:    em(25px)
+            padding:        em(5px)
+            background:     none
+            border:         none
+            border-bottom:  1px solid #aaa
+            outline:        none
+            outline-color:  transparent
+            outline-style:  none
+
+        button
+            border:         none!important       
+
+                
+ul.card-brief-list
+
+    .card
+    
+        .card-content
+            padding:            em($unit-outter-margin)
+            display:            flex
+            flex-flow:          row wrap
+            justify-content:    space-around
+
+            &.first-child
+                margin-top:     0
+
+            .card-brief-main
+                flex-grow:      2
+                font-weight:    bold
+
+            .card-brief-addon
+                flex-grow:      1

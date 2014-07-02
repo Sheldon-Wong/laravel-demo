@@ -1,0 +1,126 @@
+@import "compass/css3"
+@import "variables"
+@import "helpers"
+
+.banner
+    overflow: hidden
+    padding-top: 50px
+    background:     white
+
+    ul
+        height:  100%
+
+        li
+            min-height: 300px !important
+            height: 100%
+
+    a
+        display: block
+        width: 100%
+        height: 85%
+
+.section
+    margin:     em(25px) 0
+
+    header
+        color:      $brand-white-color
+        font-weight: bold
+        background:    $brand-red-color
+        display:    inline-block
+        padding:    em(10px)
+        font-size:  em(14px)
+
+    .card
+        margin-top: 0
+
+        .card-content
+            width: auto
+            padding: 20px 5px 
+
+#hot-movies,
+#hot-news
+    .card-content
+        padding-top: 0
+        padding-bottom: 0
+
+    ul
+        & > li:not(.justified-item)
+            margin-top: em(25px)
+            margin-bottom: em(25px)
+
+#hot-news
+    h3
+        font-size: em(20px)
+        font-weight: bold
+
+
+#categories
+    .navs
+        display:        table
+        table-layout:   fixed
+        border-collapse: separate
+        a
+            font-size:  em(14px)
+            display:    table-cell
+            text-align: center
+            width:      1%
+            vertical-align: middle
+            color:      $brand-red-color
+            &.active
+                background: transparent
+                color:      $brand-white-color
+                font-weight: bold
+    .nav-content
+        .nav-content-items
+            .recomendation
+                overflow:       hidden
+                margin:         em(30px) em($unit-outter-margin) em(40px)
+                height:         em(112px)
+                border:         1px solid rgba(#fff, .2)
+                padding:        em(8px) em(8px) 0 em(8px)
+                +border-radius(5px)
+                img
+                    float:      left
+                    width:      em(63px)
+                    height:     auto
+                    margin-right: em(10px)
+                    margin-bottom: em(8px)
+                    +box-shadow(0 0 10px #2F4F60)
+                .intro
+                    p
+                        color:          #eee
+                        font-size:      em(14px)
+                        line-height:    em(20px)
+                        span
+                            margin-left: em(5px)
+                        &:first-child
+                            font:
+                                size:       em(15px)
+                                weight:     bold
+                            margin-bottom:  em(5px)
+                        &:nth-child(2)
+                            margin-bottom:  em(5px)
+            a
+                text-align:     center
+                display:        block
+                color:          $brand-red-color
+                border:         1px solid $brand-red-color
+
+                &:hover
+                    background:    $brand-red-color
+                    color:         $brand-white-color 
+
+            ul
+                margin:         0 em($unit-outter-margin) em($unit-outter-margin) em($unit-outter-margin)
+                li
+                    float:          none
+                    display:        block
+                    line-height:    em(25px)
+                    margin:         em(10px)
+                    font:
+                        weight:     bold
+                        size:       em(20px)
+                    a
+                        padding:    em(5px,14px) em(15px,14px)
+                        +border-radius(15px)
+                        font-size:  em(14px)

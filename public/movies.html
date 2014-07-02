@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maxium-scale=1.0, user-scalable=no;">
+		<title>watch.io</title>
+		<link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+		<link rel="stylesheet" href="css/vendor/bootflat.css">
+		<link rel="stylesheet" href="css/vendor/font-awesome.min.css">
+		<link rel="stylesheet" href="css/vendor/animate.min.css">
+		<link rel="stylesheet" href="js/vendor/raty/jquery.raty.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/page/admin.css">
+		<link rel="stylesheet" href="css/page/categories.css">
+	</head>
+	<body>
+		<!-- top navigator is shown and fixed at the top of the window,
+				which appears in every page -->
+		<div class="navigator">
+			<header class="logo">
+				<h1>watch.io</h1>
+			</header>
+			<div class="nav-icon">
+				<img src="images/nav-icon.png" alt="">
+			</div>
+		</div>
+		<div class="iwatch-wrapper">
+			<div class="modal fade" id="js-order-to-confirm">
+				<div class="modal-dialog modal-sm">
+					<div class="modal-content">
+					  	<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">订单确认</h4>
+						</div>
+						<div class="modal-body card-content">
+							<div class="order-picture"></div>
+							<div class="order-main">
+								<h3></h3>
+								<b>价格：<span></span></b>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">取消订单</button>
+							<button type="button" class="btn btn-primary js-btn-to-buy">确认支付</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- the conent of the page is wrapped in the '.conent' -->
+			<div id="categories" class="content">
+				<div class="card main-card">
+					<nav class="card-content">
+						<ul>
+							<li class="current"><a href="/search?category=category">全部类型</a></li>
+							<li><a href="/search?keyword=category-title&&category=category">类型1</a></li>
+							<li><a href="/search?keyword=category-title&&category=category">类型2</a></li>
+							<li><a href="/search?keyword=category-title&&category=category">类型3</a></li>
+						</ul>
+					</nav>
+				</div>
+				<ul class="card-list row cards-picture">
+					<li class="col-sm-12 col-md-6">
+						<div class="card has-actions">
+							<div class="card-content" data-dom-movie="123">
+								<div class="content-picture">
+									<a href="/movie-details.html"><img src="images/movies/the_amazing_spiderman_2_poster.jpg" alt="Andrew Garfield"></a>
+								</div>
+								<div class="content-main">
+									<h3><a href="/movie-details.html">惊人的失败者2(2014)</a></h3>
+									<div class="js-raty" data-score="3" data-read-only="true"></div>
+									<p>价格：<span class="price"><i class="fa fa-jpy"></i> 10.00</span></p>
+									<p>Andrew Russell Garfield was born in Los Angeles, California, to a British-born mother, Lynn (Hillman), and an American-born father, Richard Garfield. When he was three, he moved to Surrey, U.K., with his parents and older brother. Andrew was raised Jewish. He went to a private school, the City of London Freemen's School. He began acting in youth.</p>
+
+								</div>
+							</div>
+							<ul class="card-action">
+								<li>
+									<a href="/movie-details.html"><i class="fa fa-eye"></i> 预览详情</a>
+								</li>
+								<li>
+									<a href="#" data-toggle="modal" data-movie-id="123" data-target="#js-order-to-confirm" class="red-text"><i class="fa fa-shopping-cart"></i> 立即购买</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+				
+			<div class="bottom-navigator">
+				<!-- search bar, which appears in every page to offer a quick navigation -->
+				<a class="search-icon" href="#"><img src="images/search-icon.png"></a>
+				<div class="search-input bench">
+					<input type="text" placeholder="试试输入‘中华小波妹’">
+				</div>
+				<div class="search-content nav-content">
+					<ul>
+						<li>
+							<!-- poster -->
+							<img src="images/category-nav-content/final-destination-4.jpg" alt="">
+							<!-- brief introduction -->
+							<div class="intro">
+								<p style="color:#fff">死神来了 4<span>(2009)</span></p>
+								<p style="color:#fff"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></p>
+								<p style="color:#fff">The world is too crowded, while the hell is empty, so here comes the death.</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- // -->
+				<!-- category nav items, which only appears in the home page -->
+				<div class="navs bench">
+					<!-- <button class="btn btn-block" style="height:100%">加入购物车</button> -->
+				</div>
+			</div>
+		</div>
+		<script src="js/vendor/jquery.min.js"></script>
+		<script src="js/vendor/bootstrap.min.js"></script>
+		<script src="js/vendor/raty/jquery.raty.js"></script>
+		<script src="js/watch.global.js"></script>
+		<script src="js/watch.global.bottom-navigator.js"></script>
+		<script src="js/watch.categories.js"></script>
+	</body>
+</html>

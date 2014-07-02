@@ -1,0 +1,52 @@
+@import "compass/css3"
+@import "variables"
+@import "helpers"
+
+header
+	position: 			relative
+	margin-top:         em(80px)
+	text-align: 		center
+	h1
+		font:
+			size:      em(80px)
+
+#login
+	margin-top:         em(80px)
+	max-width: 			em(420px)
+	display: 			block
+	margin-left: 		auto
+	margin-right: 		auto
+
+	.card
+		+border-radius( 3px )
+		margin: 			em($unit-outter-margin)
+		padding: 			em(20px) em($unit-outter-margin) em(20px) em($unit-outter-margin)
+		width: 				auto
+
+		.card-content
+
+			input
+				line-height: 	em(30px)
+				padding: 		em(5px) 0
+				border-bottom: 	1px solid #aaa
+				padding:        em(8px) em(5px)
+				margin:         em(5px) 0
+
+			button
+				margin-top: 	em($unit-outter-margin*1.6)
+
+	#login-card
+		padding: 0
+
+		.card-content
+			padding: em(10px) 0
+			text-align: center
+
+			.justified-item
+				a
+					color: $brand-black-color
+
+				&:last-child
+					border-left: $line-seperator
+
+	

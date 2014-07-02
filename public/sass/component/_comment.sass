@@ -1,0 +1,52 @@
+@import "compass/css3"
+@import "variables"
+@import "helpers"
+
+.comment
+	display: 		block
+	font-size: 		em(16px)
+
+	.comment-poster
+		float: 			left
+		width: 			em(70px)
+
+	.comment-body
+		padding: 		0
+		float: 			right
+		width: 			calc(100% - 74px)
+
+		span.addon
+			display: 		inline-block
+			font-size: 		em(16px)
+			line-height: 	em(16px)
+			height: 		auto
+			color: 			#555
+
+			&:first-child
+				float: 			left
+				font-weight: 	bold
+				margin-bottom: 	em($unit-outter-margin*.4)
+
+			&:nth-child(2)
+				float: 			right
+				color: 			#aaa
+
+		p
+			clear: 			both
+			text-align: 	justify
+
+
+
+.comment-list
+	
+	li
+		clear: 			both
+		padding: 		em($unit-outter-margin) 0
+		border-bottom: 	$line-seperator
+
+		&:first-child
+			padding-top: 0
+
+		&:last-child
+			padding-bottom: 0
+			border-bottom: none

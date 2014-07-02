@@ -1,0 +1,108 @@
+@import "compass/css3"
+@import "compass/css3/filter"
+@import "variables"
+@import "helpers"
+
+#movie-details
+	
+	.main-card
+
+		&.card
+			padding-top:  50px
+
+			img
+				border: none
+				+box-shadow(0 0 10px #1B1B1B)
+
+			.card-heading
+				padding-top: 60px
+				height: 		300px
+				background-size: 100% 100%
+				position: 	relative
+
+				h2
+					font-size: 	em(23px)
+
+				ul
+					font-size: em(14px)
+					color: 		white
+					line-height: em(28px)
+
+				.movie-cover
+					background-color: $brand-black-color
+					position: absolute
+					width: 		100%
+					height: 	100%
+					top: 		0
+					left: 		0
+
+					& > div
+						position: 	absolute
+						top: 		0
+						left: 		0
+						opacity: 	.15
+						width: 		100%
+						height: 	100%
+						background-size: 100% 100%
+
+	.movie-details-nav
+		background: transparent
+
+		.nav
+			background: transparent
+
+			@media(min-width: 970px)
+				padding: 0
+
+		.card-content
+			padding-top: 0
+			padding-bottom: 0
+
+		a
+			+border-radius(0 !important)
+
+		li.active > a
+			background-color: $brand-red-color !important
+			color: 		white !important
+
+
+	.movie-details-item
+		padding: 0
+
+		.card
+			width: auto
+			margin: 0 em(20px)
+
+		@media(min-width:970px)
+			.tab-pane
+				margin: 0
+
+
+
+	#comments
+
+		&.card
+
+			.blank-form-card
+				padding-left: 0
+				padding-right: 0
+
+				.card-content
+					padding-top: 0
+					padding-left: 0
+					padding-right: 0
+					font-size: em(18px)
+
+
+	#related-news
+		h3
+			font-size: em(20px)
+			font-weight: bold
+
+		.card-content
+			padding: 0 5px 10px 5px
+
+		ul
+			& > li:not(.justified-item)
+				margin-top: em(25px)
+				margin-bottom: em(25px)

@@ -1,0 +1,30 @@
+@import "compass/css3"
+@import "variables"
+@import "helpers"
+
+#categories
+	
+	&.content
+		padding-top: 50px
+
+	nav
+
+		li
+			display: inline-block
+
+			a
+				display: block
+				padding: 5px 15px
+				color: 	$brand-red-color
+
+				&:hover
+					background: #eee
+
+			&.current
+				background: $brand-red-color
+
+				a
+					color: white !important
+
+					&:hover
+						background: $brand-red-color

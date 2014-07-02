@@ -1,0 +1,17 @@
+@import "compass/css3"
+@import "variables"
+@import "helpers"
+
+.justified-container
+	display: 	flex
+	flex-flow: 	row wrap
+	justify-content: space-around
+
+	.justified-item
+		flex-grow: 		1
+
+		&.size-larger
+			flex-grow: 	2
+
+		&.size-larger
+			flex-grow: 	3

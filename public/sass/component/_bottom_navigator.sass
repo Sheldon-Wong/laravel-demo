@@ -1,0 +1,106 @@
+@import "compass/css3"
+@import "compass/css3/filter"
+@import "helpers"
+@import "variables"
+
+$bottom-navigator-height:       $nav-height
+$search-icon-size:              em(32px)
+// controlled by javascript : $nav-conent-height:     em(568px)
+.bottom-navigator
+    max-width:      970px
+    z-index:        500
+    position:       fixed
+    bottom:         0
+    width:          100%
+    height:         $bottom-navigator-height
+    background:     rgba(247,247,247,.95)
+    +box-shadow(rgba(0,0,0,.2) 0 0 6px)
+    display:        table
+    table-layout:   fixed
+    &:hover
+        +box-shadow(none !important)
+    a.search-icon
+        width:          15.1%
+        height:         inherit
+        display:        table-cell
+        text-align:     center
+        vertical-align: middle
+        img
+            margin-top: em(5px)
+            width:      auto
+    .bench
+        position:       absolute
+        right:          0
+        top:            0
+        width:          85%
+        height:         inherit
+    .search-input
+        display:            none
+        input
+            display:        block
+            width:          100%
+            outline:        none
+            border:         none
+            line-height:    $bottom-navigator-height
+            color:          $brand-black-color
+            padding-left:   em(15px)
+            font-weight:    bold
+            +input-placeholder($brand-black-color)
+    .search-content
+        // background:         rgba($brand-black-color, .96)!important
+        background:         rgba(38, 39, 39, 0.94) !important
+        ul
+            margin:         em(30px) em($unit-outter-margin) em(40px)
+            height:         em(112px)
+            padding:        em(8px) em(8px) 0 em(8px)
+
+            li
+                height:     em(120px)
+
+            img
+                float:      left
+                width:      em(63px)
+                height:     auto
+                margin-right: em(10px)
+                margin-bottom: em(8px)
+            .intro
+                p
+                    color:          #eee
+                    font-size:      em(14px)
+                    line-height:    em(20px)
+                    span
+                        margin-left: em(5px)
+                    &:first-child
+                        font:
+                            size:       em(15px)
+                            weight:     bold
+                        margin-bottom:  em(5px)
+                    &:nth-child(2)
+                        margin-bottom:  em(5px)
+    .navs
+        // allow to customize this
+        // a list of actions, a list of nav items, even only one action or nav-item, etc.
+    .nav-content
+        display:    none
+        overflow:   hidden
+        z-index:    -1
+        width:      100%
+        //** controlled by javascript : height:     $nav-conent-height + $nav-conent-height
+        background: $brand-black-color
+        color:      $brand-red-color
+        position:   absolute
+        //** controller by javascript : top:        -$nav-conent-height
+        left:       0
+        .nav-content-bg
+            width:          inherit
+            height:         inherit
+            position:       absolute
+            z-index:        -100
+            background-size: cover
+            opacity:        .45
+            +filter(blur(10px))
+        .nav-content-items
+            position:       absolute
+            z-index:        200
+            width:          inherit
+            height:         inherit

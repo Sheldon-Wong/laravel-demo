@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>WATCH.IO administrator dashboard</title>
+		<link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+		<link rel="stylesheet" href="css/vendor/bootflat.css">
+		<link rel="stylesheet" href="css/vendor/font-awesome.min.css">
+		<link rel="stylesheet" href="css/vendor/animate.min.css">
+		<link rel="stylesheet" href="js/vendor/froala-editor/css/froala_editor.min.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/page/admin.css">
+	</head>
+	<body>
+
+		<div class="container">
+
+			<div class="row">
+				<header>
+					<h1>watch.io</h1>
+					<h2>Administrator Dashboard</h2>
+				</header>
+			</div>
+
+			<div class="row">
+				<ul class="nav nav-tabs" id="navigator">
+					<li class="active"><a href="#movies" data-toggle="tab">电影</a></li>
+					<li><a href="#news" data-toggle="tab">新闻</a></li>
+					<li><a href="#actors" data-toggle="tab">演员</a></li>
+					<li><a href="#categories" data-toggle="tab">电影类型</a></li>
+					<li><a href="#users" data-toggle="tab">用户</a></li>
+					<li><a href="#orders" data-toggle="tab">订单</a></li>
+				</ul>
+
+				<div class="tab-content">
+
+					<div class="tab-pane active" id="movies">
+						<div class="action-bar-input">
+							<input type="text" placeholder="输入新建的电影名称，然后点击右边的加号">
+							<button class="btn" data-toggle="modal" data-target="#movie-new"><i class="fa fa-plus"></i></button>
+						</div>
+						<div class="modal fade" id="movie-new">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+									</div>
+									<div class="modal-body">
+										<form class="blank-form-card" method="post" enctype="multipart/form-data" action="">
+											<div class="card-content">
+
+												<label for="movie-title" class="input-label">电影名称</label>
+												<input name="title" type="text" class="input" placeholder="输入电影名称" id="movie-title" required>
+
+												<label for="movie-year" class="input-label">上映年份</label>
+												<input name="year" type="text" class="input" id="movie-year" placeholder="输入电影上映的年份" required autofocus>
+
+												<label for="movie-description" class="input-label">电影简介</label>
+												<textarea name="description" id="movie-description" class="input" cols="30" rows="5" placeholder="输入电影的简介" required></textarea>
+
+												<label for="movie-poster" class="input-label">海报</label>
+												<input name="poster" type="file" id="movie-poster" required>
+
+												<label for="movie-uri" class="input-label">电影原片</label>
+												<input name="movieUri" type="file" id="movie-uri" required>
+
+												<label for="movie-trailer-uri" class="input-label">电影预告片</label>
+												<input name="movieTrailerUri" type="file" id="movie-trailer-uri" required>
+
+												<label for="movie-alias" class="input-label">电影别名</label>
+												<input name="alias" type="text" class="input" id="movie-alias" placeholder="输入电影的其他别名" required>
+
+												<label for="movie-countries" class="input-label">国家</label>
+												<input name="countries" type="text" class="input" id="movie-countries" placeholder="输入电影所属的国家" required>
+
+												<label for="movie-languages" class="input-label">语言</label>
+												<input name="languages" type="text" class="input" id="movie-languages" placeholder="输入电影的语言" required>
+
+												<label for="movie-directors" class="input-label">导演</label>
+												<input name="directors" type="text" class="input" id="movie-directors" placeholder="输入电影的导演" required>
+
+												<label for="movie-rank" class="input-label">评分</label>
+												<input name="rank" type="text" class="input" id="movie-rank" placeholder="输入电影的评分" required>
+
+												<label for="movie-length" class="input-label">时长</label>
+												<input name="length" type="text" class="input" id="movie-length" placeholder="输入电影的时长" required>
+
+												<label for="movie-categories" class="input-label">类型</label>
+												<input name="categories" type="text" class="input" id="movie-categories" placeholder="输入电影的类型" required>
+
+											</div>
+										</form>
+									</div>
+									<div class="modal-footer">
+										<button class="btn btn-default" data-dismiss="modal">取消</button>
+										<button type="submit" class="btn btn-primary">保存电影</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<ul class="card-list row cards-picture">
+							<li class="col-sm-12 col-md-6" data-movie-id="123">
+								<div class="card has-actions">
+									<div class="card-content">
+										<div class="content-picture">
+											<a href="#"><img src="images/movies/the_amazing_spiderman_2_poster.jpg" alt="The Amazing Spiderman 2"></a>
+										</div>
+										<div class="content-main" id="movie-id-123">
+											<h3><a href="#">The Amazing Spider-Man 2<span>(2014)</span></a></h3>
+											<p>Peter Parker runs the gauntlet as the mysterious company Oscorp sends up a slew of super villains against him, impacting his life.</p>
+											<aside>
+												<p><b>Director</b> <a href="">Marc Webb</a></p>
+												<p><b>Stars</b> <a href="">Andrew Garfield</a>, <a href="">Emma Stone</a>, <a href="">Jamie Foxx</a>, more...</p>
+											</aside>
+										</div>
+									</div>
+									<ul class="card-action">
+					    				<li>
+					    					<a href="#" data-movie-id="123" data-toggle="modal" data-target="#news-edit"><i class="fa fa-pencil"></i> 编辑</a>
+					    				</li>
+					    				<li>
+					    					<a href="#" data-movie-id="123"><i class="fa fa-trash-o"></i> 删除</a>
+					    				</li>
+					    			</ul>
+				    			</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="tab-pane" id="news">
+						<div class="action-bar-input">
+							<input type="text" placeholder="输入新建的新闻标题，然后点击右边的加号">
+							<button class="btn" data-toggle="modal" data-target="#news-new"><i class="fa fa-plus"></i></button>
+						</div>
+						<div class="modal fade" id="news-new">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+									</div>
+									<div class="modal-body">
+										<div class="blank-form-card">
+											<div class="card-content">
+												<label for="news-title" class="input-label">新闻标题</label>
+												<input type="text" class="input" placeholder="输入新闻标题" id="news-title" name="title">
+												<label for="news-content" class="input-label">新闻内容</label>
+												<div id="news-wysiwyg-new"></div>
+											</div>
+										</div>
+									</div>
+									<div class="modal-footer">
+										<button class="btn btn-default" data-dismiss="modal">取消</button>
+										<button type="submit" class="btn btn-primary">保存新闻</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<ul class="card-list row cards-picture">
+							<li class="col-sm-12 col-md-6" data-actor-id="123">
+								<div class="card has-actions">
+									<div class="card-content">
+										<div class="content-picture">
+											<a href="#"><img src="images/news/amazing-spider-man-2-poster.jpg" alt="The Amazing Spider-Man 2′ Crosses $500M Overseas"></a>
+										</div>
+										<div class="content-main" id="news-id-123">
+											<h3><a href="#">The Amazing Spider-Man 2′ Crosses $500M Overseas</a></h3>
+											<p>Sony's The Amazing Spider-Man 2 has become the first studio film released in 2014 to cross the $500M mark internationally. As of this morning, the sequel to the reboot has an overseas cume of $500.1M. At the weekend, it added $4.7M to reach $497.3M which already surpassed the lifetime gross of the first film’s $495.9M. The Marc Webb-directed follow-up is still playing in 81 markets. Thus far this year, it’s been the No. 1 release in Hong Kong, Indonesia, Malaysia, the Philippines, Singapore, South Africa, Thailand, Kenya, Kuwait and the United Arab Emirates. In China, it’s crossed $94M, making it the No. 2 Hollywood movie of the year there behind Captain America: The Winter Soldier. In the U.S., the cume is $193.1M. TASM2 opened overseas in late April, rolling out in an inital 14 markets for what was at the time the biggest international debut of the year at $47M. The webslinger has traditionally done particularly well overseas in his various incarnations; the only previous take to pass $500M overseas was the Sam Raimi-directed Spider-Man 3 in 2007.</p>
+										</div>
+									</div>
+									<ul class="card-action">
+					    				<li>
+					    					<a href="#" data-news-id="123" data-toggle="modal" data-target="#news-edit"><i class="fa fa-pencil"></i> 编辑</a>
+					    				</li>
+					    				<li>
+					    					<a href="#" data-news-id="123"><i class="fa fa-trash-o"></i> 删除</a>
+					    				</li>
+					    			</ul>
+				    			</div>
+							</li>
+						</ul>
+						<div class="modal fade" id="news-edit">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+									</div>
+									<div class="modal-body">
+										<form action="" class="blank-form-card">
+											<div class="card-content">
+												<input type="hidden" name="id">
+												<label for="news-title" class="input-label">新闻标题</label>
+												<input type="text" class="input" placeholder="输入新闻标题" id="news-title" name="title">
+												<label for="news-content" class="input-label">新闻内容</label>
+												<div id="news-wysiwyg-edit"></div>
+											</div>
+										</form>
+									</div>
+									<div class="modal-footer">
+										<button class="btn btn-default" data-dismiss="modal">关闭</button>
+										<button type="submit" class="btn btn-primary">更新类型</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 演员 -->
+					<div class="tab-pane" id="actors">
+						<!-- 创建演员 -->
+						<div class="action-bar-input">
+							<input type="text" placeholder="输入新建的演员姓名，然后点击右边的加号">
+							<button class="btn" data-toggle="modal" data-target="#actor-new"><i class="fa fa-plus"></i></button>
+						</div><!-- // 创建演员 -->
+						<!-- 创建对话框 -->
+						<div class="modal fade" id="actor-new">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+									</div>
+									<div class="modal-body">
+										<form class="blank-form-card" method="post" enctype="multipart/form-data" action="">
+											<div class="card-content">
+												<label for="actor-name" class="input-label">演员姓名</label>
+												<input type="text" class="input" placeholder="输入演员的姓名" id="actor-name" name="name">
+												<label for="actor-description" class="input-label">演员生平</label>
+												<textarea name="description" id="actor-description" cols="30" rows="5" class="input" placeholder="输入演员的生平" autofocus></textarea>
+												<label for="actor-avatar" class="input-label">演员头像</label>
+												<input type="file" id="actor-avatar" name="avatar">
+											</div>
+										</form>
+									</div>
+									<div class="modal-footer">
+										<button class="btn btn-default" data-dismiss="modal">关闭</button>
+										<button type="submit" class="btn btn-primary">保存演员</button>
+									</div>
+								</div>
+							</div>
+						</div><!-- // 创建对话框 -->
+						<!-- 演员列表 -->
+						<ul class="card-list row cards-picture">
+							<li class="col-sm-12 col-md-6" data-actor-id="123">
+								<div class="card has-actions">
+									<div class="card-content">
+										<div class="content-picture">
+											<a href="#"><img src="images/actors/andrew_garfield.jpg" alt="Andrew Garfield"></a>
+										</div>
+										<div class="content-main" id="actor-id-123">
+											<h3><a href="#">Andrew Garfield</a></h3>
+											<p>Andrew Russell Garfield was born in Los Angeles, California, to a British-born mother, Lynn (Hillman), and an American-born father, Richard Garfield. When he was three, he moved to Surrey, U.K., with his parents and older brother. Andrew was raised Jewish. He went to a private school, the City of London Freemen's School. He began acting in youth.</p>
+										</div>
+									</div>
+									<ul class="card-action">
+					    				<li>
+					    					<a href="#" data-actor-id="123" data-toggle="modal" data-target="#actor-edit"><i class="fa fa-pencil"></i> 编辑</a>
+					    				</li>
+					    				<li>
+					    					<a href="#" data-actor-id="123"><i class="fa fa-trash-o"></i> 删除</a>
+					    				</li>
+					    			</ul>
+				    			</div>
+							</li>
+						</ul><!-- // 演员列表 -->
+						<div class="modal fade" id="actor-edit">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+									</div>
+									<div class="modal-body">
+										<form action="" class="blank-form-card">
+											<div class="card-content">
+												<input type="hidden" name="id">
+												<label for="actor-name" class="input-label">演员名称</label>
+												<input type="text" class="input" id="actor-name" name="name">
+												<label for="actor-description" class="input-label">演员生平</label>
+												<textarea name="description" id="actor-description" id="" cols="30" rows="5" class="input"></textarea>
+											</div>
+										</form>
+									</div>
+									<div class="modal-footer">
+										<button class="btn btn-default" data-dismiss="modal">关闭</button>
+										<button type="submit" class="btn btn-primary">更新类型</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-pane" id="categories">
+						<div class="action-bar-input" action="">
+							<input type="text" placeholder="输入新建的电影类型，然后点击右边的加号">
+							<button class="btn" type="submit"><i class="fa fa-plus"></i></button>
+						</div>
+						<ul class="card-list cards-label row">
+							<li class="col-xs-6 col-sm-4 col-md-3" data-category-id="123">
+								<div class="card has-actions">
+									<div class="card-content">
+										<h3 id="category-id-123">动作</h3>
+									</div>
+									<ul class="card-action">
+					    				<li>
+					    					<a href="#" data-category-id="123" data-toggle="modal" data-target="#category-edit"><i class="fa fa-pencil"></i> 编辑</a>
+					    				</li>
+					    				<li>
+					    					<a href="#" data-category-id="123"><i class="fa fa-trash-o"></i> 删除</a>
+					    				</li>
+					    			</ul>
+								</div>
+							</li>
+						</ul>
+						<div class="modal fade" id="category-edit">
+							<div class="modal-dialog modal-sm">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+									</div>
+									<div class="modal-body">
+										<div class="blank-form-card">
+											<div class="card-content">
+												<input type="hidden" name="id">
+												<label for="category-title" class="input-label">类型名称</label>
+												<input type="text" class="input" id="category-title" name="title">
+											</div>
+										</div>
+									</div>
+									<div class="modal-footer">
+										<button class="btn btn-default" data-dismiss="modal">关闭</button>
+										<button type="submit" class="btn btn-primary">更新类型</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-pane" id="users">
+						<div class="action-bar-input">
+							<input type="text" placeholder="输入新建的用户名，然后点击右边的加号">
+							<button class="btn" data-toggle="modal" data-target="#user-new"><i class="fa fa-plus"></i></button>
+						</div>
+						<div class="modal fade" id="user-new">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+									</div>
+									<div class="modal-body">
+										<div class="blank-form-card">
+											<div class="card-content">
+												<label for="user-name" class="input-label">用户昵称</label>
+												<input type="text" class="input" placeholder="输入用户昵称" id="user-name" name="name" required>
+												<label for="user-email" class="input-label">用户邮箱</label>
+												<input type="email" class="input" placeholder="输入用户邮箱" id="user-password" name="email" autofocus required>
+												<label for="user-password" class="input-label">用户密码</label>
+												<input type="password" class="input" placeholder="输入用户密码" id="user-password" name="password" required>
+											</div>
+										</div>
+									</div>
+									<div class="modal-footer">
+										<button class="btn btn-default" data-dismiss="modal">关闭</button>
+										<button type="submit" class="btn btn-primary">保存用户</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<ul class="card-list card-list-striped row cards-normal">
+							<li class="col-xs-12" data-user-id="123">
+								<div class="card">
+									<div class="card-content">
+										<div class="content-main" id="user-id-123">
+											<img src="images/avatars/avatar-boy.png" alt="">
+											<p>Doray_Hong</p>
+											<p>hongduhui@gmail.com</p>
+										</div>
+										<div class="content-addon">
+											<a href="#" data-user-id="123" data-toggle="modal" data-target="#user-edit"><i class="fa fa-pencil"></i> 编辑</a>
+											<a href="#" data-user-id="123"><i class="fa fa-trash-o"></i> 删除</a>
+										</div>
+									</div>
+				    			</div>
+							</li>
+						</ul>
+						<div class="modal fade" id="user-edit">
+							<div class="modal-dialog modal-sm">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+									</div>
+									<div class="modal-body">
+										<div action="" class="blank-form-card">
+											<div class="card-content">
+												<input type="hidden" name="id">
+												<label for="user-name" class="input-label">用户昵称</label>
+												<input type="text" class="input" id="user-name" name="name">
+												<label for="user-email" class="input-label">用户邮箱</label>
+												<input type="email" class="input" id="user-email" name="email">
+											</div>
+										</div>
+									</div>
+									<div class="modal-footer">
+										<button class="btn btn-default" data-dismiss="modal">关闭</button>
+										<button type="submit" class="btn btn-primary">更新用户</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-pane" id="orders">
+						<div class="action-bar-input">
+							<input type="text" placeholder="输入查询的订单编号，然后点击右边的放大镜">
+							<button class="btn"><i class="fa fa-search"></i></button>
+						</div>
+						<ul class="card-list card-list-striped row cards-order">
+							<li class="col-xs-12">
+								<div class="card">
+									<div class="card-content">
+										<div class="order-info">
+											<img src="images/avatars/avatar-boy.png" alt="">
+											<p><b>订单编号</b> 111111111</p>
+											<p><b>购买用户</b> Doray_Hong</p>
+										</div>
+										<div class="order-content">
+											<ul>
+												<li><img src="images/movies/the_amazing_spiderman_2_poster.jpg" alt=""></li>
+												<li><img src="images/movies/the_amazing_spiderman_2_poster.jpg" alt=""></li>
+												<li><img src="images/movies/the_amazing_spiderman_2_poster.jpg" alt=""></li>
+											</ul>
+										</div>
+										<div class="order-price">
+											<p><span><i class="fa fa-jpy"></i></span>123.42</p>
+										</div>
+									</div>
+				    			</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/vendor/jquery.min.js"></script>
+		<script src="js/vendor/bootstrap.min.js"></script>
+		<script src="js/vendor/froala-editor/js/froala_editor.min.js"></script>
+		<script src="js/vendor/froala-editor/js/langs/zh_cn.js"></script>
+		<script src="js/watch.admin.actors.js"></script>
+		<script src="js/watch.admin.categories.js"></script>
+		<script src="js/watch.admin.news.js"></script>
+		<script src="js/watch.admin.users.js"></script>
+		<script src="js/watch.admin.movies.js"></script>
+		<script src="js/watch.admin.js"></script>
+	</body>  
+</html>
